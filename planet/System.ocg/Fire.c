@@ -117,7 +117,6 @@ global func FxIntNonFlammableEffect(string new_name)
 	return 0;
 }
 
-
 global func FxFireStart(object target, proplist effect, int temp, int caused_by, bool blasted, object incinerating_object, strength)
 {
 	// safety
@@ -482,8 +481,6 @@ global func FxFireTimer(object target, proplist effect, int time)
 		if (!Random(3) && effect.FreqReduction < 14)
 			CreateParticle("Magic", PV_Random(-effect.fire_width, effect.fire_width), PV_Random(-effect.fire_height, effect.fire_height), PV_Random(25, -25), PV_Random(-25, 12), 50, effect.chaoticspark);
 		
-		// Flameborders and sharp flames
-
 		// Flame borders
 		if (effect.border_active)
 		{
